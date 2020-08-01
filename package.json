@@ -18,6 +18,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "chakra-ui": "^0.3.9",
     "firebase-admin": "^8.12.1",
     "next": "9.4.0",
     "react": "16.13.1",
