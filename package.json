@@ -1,16 +1,16 @@
 {
-  "name": "nextjs-vercel-firebase",
+  "name": "spacetag-api",
   "version": "0.0.0",
   "private": true,
   "author": {
-    "name": "Lee Robinson",
-    "email": "me@leerob.io",
-    "url": "https://leerob.io"
+    "name": "Andreas Bigger",
+    "email": "bigger@usc.edu",
+    "url": "https://andreasbigger.com"
   },
-  "license": "MIT",
+  "license": "GPU3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leerob/nextjs-vercel-firebase.git"
+    "url": "git+https://github.com/abigger87/spacetag-api.git"
   },
   "scripts": {
     "dev": "next dev",
