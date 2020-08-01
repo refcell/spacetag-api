@@ -13,16 +13,35 @@
     "url": "git+https://github.com/abigger87/spacetag-api.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "start": "next start",
     "build": "next build",
-    "start": "next start"
+    "dev": "next dev",
+    "format": "yarn format:index",
+    "format:index": "prettier --write \"*.{js,json,md}\""
   },
   "dependencies": {
-    "chakra-ui": "^0.3.9",
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
     "firebase-admin": "^8.12.1",
     "next": "9.4.0",
+    "prettier": "^2.0.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "swr": "^0.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
   }
 }
