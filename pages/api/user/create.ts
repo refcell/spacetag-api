@@ -9,14 +9,15 @@ export default async (req, res) => {
     try {
         // * Get Game ID
         let playerId = database.child('user').push().key
-        let { displayName, location } = req.query;
+        let { displayName, location, uid } = req.query;
 
         // * New Game Entry
         let user = {
             playerID: playerId,
             games: {},
             displayName: displayName,
-            location: location
+            location: location,
+            uid
         };
 
         // * Create Update Object
