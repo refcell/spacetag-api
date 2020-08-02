@@ -1,7 +1,7 @@
 import { admin, database } from '@/lib';
 
 /*
- * /api/user/create?displayName={displayName}&location={location}
+ * /api/user/create?displayName={displayName}&latitude={latitude}&longitude={longitude}
  * @param displayName
  * @param location
 */
