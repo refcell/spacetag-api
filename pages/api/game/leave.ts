@@ -8,8 +8,7 @@ import {admin, database} from '@/lib';
 export default async (req, res) => {
     try {
         // * Get Game ID
-        let gameId = req.query.gameId
-        let playerId = req.query.playerId
+        let { gameId, playerId } = req.query
         let isPlaying = false;
         let game = null
         let user = null;
