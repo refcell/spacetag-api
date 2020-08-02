@@ -1,13 +1,19 @@
+// @ts-nocheck
 import admin from 'firebase-admin';
 
 try {
+  const priv_key = process.env.FIREBASE_PRIVATE_KEY ? 
+    process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') :
+    "";
+    const project_id = process.env.FIREBASE_PROJECT_ID ?
+      process.env.FIREBASE_PROJECT_ID : "";
   admin.initializeApp({
     credential: admin.credential.cert({
-      project_id: process.env.FIREBASE_PROJECT_ID,
-      private_key: process.env.FIREBASE_PRIVATE_KEY,
+      project_id: project_id,
+      private_key: priv_key,
       client_email: process.env.FIREBASE_CLIENT_EMAIL
     }),
-    databaseURL: 'https://vercel-serverless.firebaseio.com'
+    databaseURL: 'https://spacetag-8c5c4.firebaseio.com/'
   });
 } catch (error) {
   /*
@@ -20,4 +26,9 @@ try {
   }
 }
 
-export default admin.firestore();
+let database = admin.database().ref();
+
+export {
+  database,
+  admin
+};
