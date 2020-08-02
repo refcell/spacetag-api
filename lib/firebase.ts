@@ -3,7 +3,7 @@ import admin from 'firebase-admin';
 
 try {
   const priv_key = process.env.FIREBASE_PRIVATE_KEY ? 
-    process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') :
+    process.env.FIREBASE_PRIVATE_KEY.replace(/\\\\/g, '\\').replace(/\\n/g, '\n') :
     "";
     const project_id = process.env.FIREBASE_PROJECT_ID ?
       process.env.FIREBASE_PROJECT_ID : "";

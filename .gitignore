@@ -75,6 +75,7 @@ typings/
 .env
 .env.test
 .env.local
+.env.build
 # .env.example - this is an example env file
 
 # parcel-bundler cache (https://parceljs.org/)
