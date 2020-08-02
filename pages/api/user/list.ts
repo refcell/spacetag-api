@@ -1,5 +1,8 @@
 import { database } from '@/lib/firebase';
 
+/*
+ * /api/user/list
+*/
 export default async (req, res) => {
     let result = {res: []};
     try {

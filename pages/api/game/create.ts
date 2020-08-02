@@ -1,17 +1,23 @@
 import { database } from '@/lib';
 
+
+/*
+ * /api/game/end?creatorId={playerUuid}&tagDistance={tagDistance}
+ * @param tagDistance
+ * @param tagDistance
+*/
 export default async (req, res) => {
     try {
         // * Get Game ID
         let newGameID = database.child('game').push().key
-        let creatorId = req.query.creatorID;
+        let { creatorId, tagDistance } = req.query;
 
         // * New Game Entry
         let postData = {
-            creatorID: req.query.creatorID,
-            tagDistance: req.query.tagDistance,
+            creatorID: creatorId,
+            tagDistance: tagDistance,
             isPlaying: true,
-            whoIsIt: req.query.creatorID,
+            whoIsIt: creatorId,
             players: {
                 [creatorId]: creatorId
             },

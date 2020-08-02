@@ -1,14 +1,21 @@
-import {database} from '@/lib/firebase';
+import {admin} from '@/lib/firebase';
 
+/*
+ * /api/user/games?playerId={playerId}
+ * @param playerId
+*/
 export default async (req, res) => {
     let result = {res: []};
+    let playerId = req.query.playerId
+
     try {
-        database
-            .child('user')
-            .on('child_added', (doc) => {
-                result.res.push(doc.key);
+        admin
+            .database()
+            .ref('user/' + playerId)
+            .on('value', (snapshot) => {
+                result.res.push(snapshot);
             });
-            
+
         res.status(200).json(result);
     } catch (e) {
         res.status(400).json({error: e})

@@ -1,7 +1,7 @@
 import {admin, database} from '@/lib/firebase';
 
 /*
- * /api/game/join?playerId={playerWhosJoining}&gameId={shortGameId}
+ * /api/game/leave?playerId={playerWhosJoining}&gameId={shortGameId}
  * @param playerId
  * @param gameId
 */

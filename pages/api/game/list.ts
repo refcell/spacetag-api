@@ -1,5 +1,8 @@
 import { database } from '@/lib/firebase';
 
+/*
+ * /api/game/list
+*/
 export default async (req, res) => {
     let result = {res: []};
     try {

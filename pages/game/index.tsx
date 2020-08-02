@@ -13,7 +13,6 @@ function City() {
   if (!data) {
     return 'Loading...';
   }
-  console.log(data);
 
   return (
     <div>
