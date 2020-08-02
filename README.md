@@ -1,6 +1,6 @@
-# Next.js + Vercel + Firebase
+# SpaceTag API
 
-> Next.js app using API routes to connect with Firestore.
+> Next.js app using API routes to connect with Firebase Realtime Database.
 
 ## Built With
 

@@ -6,12 +6,12 @@ import { database } from '@/lib/firebase';
 export default async (req, res) => {
     let result = {res: []};
     try {
-        database
+        await database
         .child('game')
         .on('child_added', (doc) => {
             result.res.push(doc);
         })
-        res.status(200).json(result);
+        res.status(200).json(JSON.stringify(result));
     } catch (e) {
         res.status(400).json({error: e})
     }
