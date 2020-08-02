@@ -13,10 +13,16 @@ function City() {
   if (!data) {
     return 'Loading...';
   }
+  console.log(data);
 
   return (
     <div>
-      <p>Games: {data}</p>
+      <h2>Games</h2>
+      <ol>
+        {data ? data.res.map((game) => {
+          return (<li key={game.gameID}>{game.gameID}</li>)
+        }) : ""}
+      </ol>
     </div>
   );
 }

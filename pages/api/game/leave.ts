@@ -29,7 +29,7 @@ export default async (req, res) => {
             isPlaying = false;
         }
 
-        // *Remove gameId from user games object
+        // * Remove gameId from user games object
         admin
             .database()
             .ref('user/' + playerId)

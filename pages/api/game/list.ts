@@ -6,7 +6,7 @@ export default async (req, res) => {
         database
         .child('game')
         .on('child_added', (doc) => {
-            result.res.push(doc.key);
+            result.res.push(doc);
         })
         res.status(200).json(result);
     } catch (e) {

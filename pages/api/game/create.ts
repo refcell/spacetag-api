@@ -22,7 +22,7 @@ export default async (req, res) => {
         // * Create Update Object
         var updates = {};
         updates['/game/' + newGameID] = postData;
-        updates['/user/' + req.query.creatorId + '/games/' + newGameID] = postData;
+        updates['/user/' + creatorId + '/games/' + newGameID] = postData;
 
         // * Update
         database.update(updates);
