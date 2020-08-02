@@ -1,12 +1,11 @@
-import firebase from '../../../lib/firebase';
+import { database } from '@/lib/firebase';
 
 export default async (req, res) => {
     let result = {res: []};
     try {
-        await firebase
+        database
         .child('game')
         .on('child_added', (doc) => {
-            //console.log(doc)
             result.res.push(doc.key);
         })
         res.status(200).json(result);
