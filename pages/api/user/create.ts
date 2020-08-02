@@ -8,8 +8,7 @@ import { database } from '@/lib';
 export default async (req, res) => {
     try {
         // * Get Game ID
-        let playerId = database.child('user').push().key
-        let { displayName, location, uid } = req.query;
+        let { displayName, location, playerId } = req.query;
 
         // * New Game Entry
         let user = {
@@ -17,7 +16,6 @@ export default async (req, res) => {
             games: {},
             displayName: displayName,
             location: location,
-            uid
         };
 
         // * Create Update Object
