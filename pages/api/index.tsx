@@ -43,7 +43,7 @@ export default function Home(props) {
         />
       </Head>
       <div className="page" >
-        <Image height={180} width={201} src="/logo.png" m={4} />
+        <Image height={200} width={200} src="/logo.png" m={4} />
         <Text fontSize="2xl" m={4} textAlign="center">
           It looks like you've found the api of SpaceTag!
         </Text>

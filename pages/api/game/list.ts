@@ -1,12 +1,12 @@
-import { database } from '@/lib/firebase';
+import { database } from '@/lib';
 
 /*
  * /api/game/list
 */
-export default async (req, res) => {
+export default (req, res) => {
     let result = {res: []};
     try {
-        await database
+        database
         .child('game')
         .on('child_added', (doc) => {
             result.res.push(doc);

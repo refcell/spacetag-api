@@ -1,4 +1,4 @@
-import {admin, database} from '@/lib/firebase';
+import {admin, database} from '@/lib';
 
 /*
  * /api/game/leave?playerId={playerWhosJoining}&gameId={shortGameId}

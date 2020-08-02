@@ -1,4 +1,4 @@
-import {admin} from '@/lib/firebase';
+import {admin} from '@/lib';
 
 /*
  * /api/user/games?playerId={playerId}
