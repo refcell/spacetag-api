@@ -9,7 +9,6 @@ export default async (req, res) => {
     try {
         let { displayName, latitude, longitude, playerId } = req.query;
 
-
         // * New Game Entry
         let user = {
             playerID: playerId,

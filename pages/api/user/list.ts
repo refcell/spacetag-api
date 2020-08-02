@@ -1,4 +1,4 @@
-import { database } from '@/lib/firebase';
+import { database } from '@/lib';
 
 /*
  * /api/user/list
@@ -6,7 +6,7 @@ import { database } from '@/lib/firebase';
 export default async (req, res) => {
     let result = {res: []};
     try {
-        database
+        await database
         .child('user')
         .on('child_added', (doc) => {
             result.res.push(doc.key);
