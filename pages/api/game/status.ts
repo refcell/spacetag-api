@@ -20,15 +20,9 @@ export default async (req, res) => {
             .on('value', (snapshot) => {
                 game = snapshot.val();
                 isPlaying = game.isPlaying;
+                players = game.players;
             });
 
-        admin
-            .database()
-            .ref('game/' + gameId + '/players')
-            .on('value', (snapshot) => {
-                playerSnapshot = snapshot.val();
-                players = playerSnapshot
-            });
 
         res.status(200).json({isPlaying, players});
     } catch (e) {
